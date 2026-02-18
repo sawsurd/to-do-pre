@@ -12,8 +12,8 @@ const formElement = document.querySelector(".to-do__form");
 const inputElement = document.querySelector(".to-do__input");
 
 function loadTasks() {
-  const alreadySavedElements = JSON.parse(localStorage.getItem("tasks"));
-  return alreadySavedElements.length > 0 ? alreadySavedElements : items;
+  const alreadySavedElements = localStorage.getItem('tasks');
+  return alreadySavedElements ? JSON.parse(alreadySavedElements) : items;
 }
 
 function createItem(item) {
